@@ -156,7 +156,6 @@ a {
 }
 #carousel .container .carousel_row .carousel-img {
   position: absolute;
-  width: 821px;
   height: 392px;
   top: 5px;
   left: 86px;
@@ -164,32 +163,32 @@ a {
 #carousel .container .carousel_row .carousel-img img {
   width: 100%;
 }
-#carousel .container .carousel_row .carousel-detail h1 {
+#carousel .container .carousel_row .carousel-detail {
   position: absolute;
   width: 291px;
-  height: 51px;
   top: 124px;
   right: 59px;
+}
+@media screen and (max-width: 950px) {
+  #carousel .container .carousel_row .carousel-detail {
+    top: 270px;
+    left: 86px;
+    transform: scale(0.7);
+  }
+}
+#carousel .container .carousel_row .carousel-detail h1 {
+  height: 51px;
   font-size: 40px;
   font-weight: 300;
   color: #000;
   line-height: 48px;
 }
 #carousel .container .carousel_row .carousel-detail p {
-  position: absolute;
-  width: 291px;
   height: 51px;
-  top: 175px;
-  right: 59px;
   font-size: 20px;
   font-weight: 300;
   color: #000;
   line-height: 24px;
-}
-#carousel .container .carousel_row .carousel-detail button {
-  position: absolute;
-  top: 225px;
-  right: 200px;
 }
 #carousel .container .carousel_row .pagination .pagination-arrow .arrow-left {
   position: absolute;
@@ -228,11 +227,21 @@ a {
 #productFeature .container .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 #productFeature .container .row .col {
   width: 33.3333333333%;
   margin-bottom: 49px;
+}
+@media screen and (max-width: 1199px) {
+  #productFeature .container .row .col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 870px) {
+  #productFeature .container .row .col {
+    width: 100%;
+  }
 }
 #productFeature .container .row .col .product-item {
   position: relative;
