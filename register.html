@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register.min.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="header-row">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./img/image_3.png" alt="..." />
+            </a>
+          </div>
+          <div class="header-content">
+            <div class="component1">
+              <a href=""
+                ><span class="cart-img"
+                  ><img src="./img/image_8.png" alt="..."
+                /></span>
+                <span class="cart_number">(1)</span></a
+              >
+            </div>
+            <a href=""><span class="login">Login</span></a>
+            <a href="register.html"><span class="register">Register</span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="menu">
+      <div class="container">
+        <a href="index.html" class="active"><span>Home</span></a>
+        <a href=""><span class="active">Men</span></a>
+        <a href=""><span class="">Women</span></a>
+        <a href=""><span class="">Kid</span></a>
+        <a href=""><span class="">Sport</span></a>
+      </div>
+    </section>
+    <section id="registerContent">
+      <div class="container">
+        <h1 class="register-title">Register</h1>
+        <form class="needs-validation" id="registerForm">
+          <div class="row">
+            <div class="col col-left">
+              <div class="col-item">
+                <input
+                  type="email"
+                  class=""
+                  id="email"
+                  placeholder="email"
+                  required
+                  name="email"
+                />
+                <!-- <span class="required">(*)</span> -->
+              </div>
+              <div class="col-item">
+                <input
+                  type="password"
+                  class=""
+                  id="password"
+                  placeholder="password"
+                  required
+                  name="password"
+                  autocomplete="off"
+                />
+                <!-- <span class="required">(*)</span> -->
+              </div>
+              <div class="col-item">
+                <input
+                  type="password"
+                  class=""
+                  id="password-confirm"
+                  placeholder="password confirm"
+                  required
+                  name="password-confirm"
+                  autocomplete="off"
+                />
+                <!-- <span class="required">(*)</span> -->
+              </div>
+            </div>
+            <div class="col">
+              <div class="col-item">
+                <input
+                  type="name"
+                  class=""
+                  id="name"
+                  placeholder="name"
+                  required
+                  name="name"
+                />
+                <!-- <span class="required">(*)</span> -->
+              </div>
+              <div class="col-item">
+                <input
+                  type="tel"
+                  class=""
+                  id="phone"
+                  placeholder="phone"
+                  required
+                  name="phone"
+                />
+                <!-- <span class="required">(*)</span> -->
+              </div>
+              <div class="userGender">
+                <span class="gender">Gender</span>
+                <input
+                  class="radio"
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="true"
+                  checked
+                />
+                <!-- <span class="radio"></span> -->
+                <label for="male"><span>Male</span> </label>
+                <input
+                  class="radio"
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="false"
+                />
+                <!-- <span class="radio"></span> -->
+                <label for="female"><span>Female</span></label>
+              </div>
+              <button id="btndangky" class="submit" type="button">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="container">
+        <img src="./img/image_9.png" alt="" />
+      </div>
+    </footer>
+    <!-- Thư viện Axios-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./controller/register.js"></script>
+  </body>
+</html>
