@@ -230,18 +230,7 @@ a {
   justify-content: space-evenly;
 }
 #productFeature .container .row .col {
-  width: 33.3333333333%;
   margin-bottom: 49px;
-}
-@media screen and (max-width: 1199px) {
-  #productFeature .container .row .col {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 870px) {
-  #productFeature .container .row .col {
-    width: 100%;
-  }
 }
 #productFeature .container .row .col .product-item {
   position: relative;

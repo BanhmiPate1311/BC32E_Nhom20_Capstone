@@ -14,7 +14,9 @@ function getProducts() {
   });
 
   //Xử lý thất bại
-  promise.catch(function (err) {});
+  promise.catch(function (err) {
+    console.log(err);
+  });
 }
 
 window.onload = function () {
