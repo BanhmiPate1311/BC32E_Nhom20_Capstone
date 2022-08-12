@@ -72,7 +72,7 @@ function kiemTraPhone(value, selectorError, name) {
       phoneNumber += value[i];
     }
   }
-  console.log(phoneNumber);
+  //   console.log(phoneNumber);
   var lengthValue = phoneNumber.length;
   if (regexPhone.test(value) && lengthValue == 10) {
     document.querySelector(selectorError).innerHTML = "";
