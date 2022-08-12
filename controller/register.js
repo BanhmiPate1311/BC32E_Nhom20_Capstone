@@ -43,5 +43,6 @@ getElement("btndangky").onclick = () => {
 
   promise.catch(function (error) {
     console.log(error);
+    swal("Đăng ký không thành công!", "Email đã được sử dụng!");
   });
 };
