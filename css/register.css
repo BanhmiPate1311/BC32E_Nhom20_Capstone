@@ -46,6 +46,12 @@
   bottom: 0;
   background: linear-gradient(180deg, #ae18e2 0%, rgba(0, 0, 0, 0) 100%);
 }
+#registerContent .container form#registerForm .row .col .col-item .sp-thongbao {
+  position: absolute;
+  top: 100%;
+  color: #f50e0e;
+  font-size: 13px;
+}
 #registerContent .container form#registerForm .row .col .userGender {
   margin-top: 44px;
   height: 51px;
