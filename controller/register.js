@@ -18,6 +18,17 @@ const getFormValues = () => {
 };
 getElement("btndangky").onclick = () => {
   const user = getFormValues();
+  let valid = true;
+  valid &=
+    checkEmail() &
+    checkPassword() &
+    checkPassWordConFirm() &
+    checkName() &
+    checkPhone();
+
+  if (!valid) {
+    return;
+  }
   console.log(user);
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Users/signup",
