@@ -47,12 +47,9 @@ function checkPassWordConFirm() {
   let value1 = document.querySelector("#password").value;
   let value2 = document.querySelector("#password-confirm").value;
   let valid = true;
-  valid = kiemtraPassWordConFirm(
-    value1,
-    value2,
-    "#tbPassWordConFirm",
-    "Mật khẩu"
-  );
+  valid =
+    kiemtraPassWordConFirm(value1, value2, "#tbPassWordConFirm", "Mật khẩu") &
+    kiemTraRong(value2, "#tbPassWordConFirm", "Mật khẩu");
   return valid;
 }
 
