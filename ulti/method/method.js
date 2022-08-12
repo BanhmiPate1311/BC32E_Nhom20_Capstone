@@ -66,8 +66,15 @@ function kiemTraTatCaKyTu(value, selectorError, name) {
 
 function kiemTraPhone(value, selectorError, name) {
   var regexPhone = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
-
-  if (regexPhone.test(value)) {
+  var phoneNumber = "";
+  for (let i = 0; i < value.length; i++) {
+    if (value[i] !== "-") {
+      phoneNumber += value[i];
+    }
+  }
+  //   console.log(phoneNumber);
+  var lengthValue = phoneNumber.length;
+  if (regexPhone.test(value) && lengthValue == 10) {
     document.querySelector(selectorError).innerHTML = "";
     return true;
   }
