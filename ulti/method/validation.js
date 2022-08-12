@@ -3,19 +3,19 @@ console.log(form);
 form.addEventListener("input", function (e) {
   switch (e.target.id) {
     case "email":
-      var valid = checkEmail();
+      checkEmail();
       break;
     case "password":
-      var valid = checkPassword();
+      checkPassword();
       break;
     case "password-confirm":
-      var valid = checkPassWordConFirm();
+      checkPassWordConFirm();
       break;
     case "name":
-      var valid = checkName();
+      checkName();
       break;
     case "phone":
-      var valid = checkPhone();
+      checkPhone();
       break;
   }
   //   if (!valid) {
