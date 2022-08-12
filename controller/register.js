@@ -37,6 +37,7 @@ getElement("btndangky").onclick = () => {
     data: user, //Dữ liệu gửi đi
   });
   promise.then(function (result) {
+    swal("Đăng ký thành công!", "Tài khoản đã được tạo!", "success");
     console.log(result.data);
   });
 

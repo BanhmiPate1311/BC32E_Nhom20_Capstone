@@ -31,7 +31,9 @@
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -47,13 +49,11 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
-
 function getProductByID(id) {
   var promise = axios({
-    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id,  //Đường dẫn backend cung cấp
-    method: 'GET',//method backend cung cấp
-    ResponseType: JSON
+    url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id, //Đường dẫn backend cung cấp
+    method: "GET", //method backend cung cấp
+    ResponseType: JSON,
   });
   //Xử lý thành công
   promise.then(function (result) {
@@ -62,12 +62,11 @@ function getProductByID(id) {
     renderRealateProduct(result.data.content);
   });
   //Xử lý thất bại
-  promise.catch(function (err) {
-  });
+  promise.catch(function (err) {});
 }
 
 const renderProductDetail = (ObjectProduct) => {
-  var html = '';
+  var html = "";
   var sp = ObjectProduct;
   html = `
   <div class="thumbnail col-md-4">
@@ -97,12 +96,12 @@ const renderProductDetail = (ObjectProduct) => {
 </div>
 </div>
       `;
-  document.querySelector('.container_product_detail').innerHTML = html;
-}
+  document.querySelector(".container_product_detail").innerHTML = html;
+};
 
 const renderRealateProduct = (ObjectProduct) => {
-  var html = '';
-  var arrayProduct = ObjectProduct.relatedProducts
+  var html = "";
+  var arrayProduct = ObjectProduct.relatedProducts;
   for (const value of arrayProduct) {
     html += `
       <div class="grid-item col-12 col-sm-6 col-lg-4">
@@ -127,12 +126,12 @@ const renderRealateProduct = (ObjectProduct) => {
       
           `;
   }
-  document.querySelector('.grid-content').innerHTML = html;
-}
+  document.querySelector(".grid-content").innerHTML = html;
+};
 
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get('productid');
-  console.log('params', myParam)
+  const myParam = urlParams.get("productid");
+  console.log("params", myParam);
   getProductByID(myParam);
-}
+};
