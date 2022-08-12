@@ -291,4 +291,22 @@ a {
   width: 100%;
 }
 
-/* DETAIL */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 34px;
+  right: 85px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #dedddc;
+  color: #909091;
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+#myBtn:hover {
+  background-color: #555;
+  color: #ffffff;
+}
